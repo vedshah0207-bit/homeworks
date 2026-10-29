@@ -1,12 +1,11 @@
-def decimal_to_binary(num):
-    if num == 0:
-        return "0"
-        
-    binary_str = ""
-    while num > 0:
-        remainder = num % 2        
-        binary_str = str(remainder) + binary_str  
-        num = num // 2            
-    return binary_str
+num = int(input("Enter a number: "))
 
-print(decimal_to_binary(input("Give the number you want to turn to binary")))  
+if num == 0:
+
+    print("0")
+else:
+    result = ""
+    while num > 0:
+        result = str(num % 2) + result
+        num = num // 2
+    print(result)
